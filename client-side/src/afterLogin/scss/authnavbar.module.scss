@@ -1,0 +1,190 @@
+$blue: #2f86a6;
+$green: #34be82;
+$lgreen: #0fd17d;
+$yellow: #f0ff24;
+$lgrey: #f8f8f8;
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  background-color: $lgreen;
+  height: 70px;
+}
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  z-index: 1000000;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Rose", cursive;
+  font-size: 24px;
+  color: $lgrey;
+  p {
+    margin: 0px 10px;
+  }
+  span {
+    font-weight: 500;
+    font-size: 32px;
+    color: $yellow;
+  }
+  img {
+    height: 70px;
+    width: auto;
+  }
+}
+.navs {
+  height: 70px;
+  width: auto;
+  display: block;
+  transition: all 1s;
+}
+.nav_link {
+  display: block;
+  float: right;
+  width: 120px;
+  height: 50px;
+  margin: 10px 5px;
+  border-radius: 500px;
+  color: #fff;
+  background-color: $lgreen;
+  font-size: 22px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s;
+  &:hover {
+    background-color: #f8f8f8;
+    color: #000;
+    transition: all 0.4s;
+  }
+}
+.active_nav {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+}
+.menu_btn {
+  width: 0px;
+  height: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu_btn {
+    position: absolute;
+    background-color: $lgreen;
+    top: 10px;
+    right: 5px;
+    height: 35px;
+    width: 45px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .navbar {
+    height: 55px;
+  }
+  .logo {
+    height: 55px;
+    img {
+      height: 55px;
+    }
+  }
+  .full_nav {
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    top: 0px;
+    background-color: $lgreen;
+    right: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    .nav_link {
+      display: block;
+      width: 140px;
+      height: 50px;
+      margin: 10px 15px;
+      border-radius: 500px;
+      color: #fff;
+      background-color: $lgreen;
+      font-size: 20px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.6s;
+      &:hover {
+        background-color: #f8f8f8;
+        color: #000;
+        transition: all 0.4s;
+      }
+    }
+    .active_nav {
+      background-color: #fff;
+      color: #000;
+      font-weight: 500;
+    }
+  }
+
+  .navs {
+    height: 55px;
+  }
+  .menu_btn {
+    &:hover {
+      cursor: pointer;
+    }
+    div {
+      height: 6px;
+      position: absolute;
+      right: 0px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px #15b46f;
+      transition: all 0.5s;
+    }
+    .nav_line1 {
+      top: 0px;
+      width: 45px;
+    }
+    .nav_line2 {
+      top: 14.5px;
+      width: 25px;
+    }
+    .nav_line3 {
+      top: 29px;
+      width: 35px;
+    }
+    .dnav_line1 {
+      top: 14.5px;
+      width: 45px;
+      transform: rotate(135deg);
+    }
+    .dnav_line2 {
+      top: 14.5px;
+      width: 0px;
+      margin-right: 22.5px;
+    }
+    .dnav_line3 {
+      top: 14.5px;
+      width: 45px;
+      transform: rotate(45deg);
+    }
+  }
+  .navs a {
+    display: none;
+  }
+}

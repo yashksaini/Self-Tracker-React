@@ -1,0 +1,472 @@
+$blue: #2f86a6;
+$green: #34be82;
+$lgreen: #0fd17d;
+$yellow: #f0ff24;
+$lgrey: #f8f8f8;
+
+.activity {
+  margin: 0;
+  padding: 15px 0 30px 0;
+}
+.activeToggle {
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  height: 60px;
+  border-radius: 500px;
+  button {
+    width: 50%;
+    height: 60px;
+    border-radius: 500px;
+    font-size: 26px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.activeBtn {
+  background-color: $green;
+  color: #fff;
+  transition: all 0.5s;
+}
+.subjectBox {
+  background-color: #fff;
+  padding: 0 0;
+  width: 60%;
+  margin-left: 20%;
+  h1 {
+    text-align: center;
+    color: $blue;
+    font-size: 32px;
+    margin: 15px 0;
+  }
+  h2 {
+    margin-left: 30px;
+    color: $blue;
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    span {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 200px;
+      font-size: 18px;
+      font-weight: 400;
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}
+.addSub {
+  width: calc(100% - 60px);
+  margin: 20px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid #d3d3d3;
+  border-radius: 500px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:focus-within {
+    border: 2px solid $blue;
+  }
+}
+.input_box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: calc(100% - 80px);
+  height: 40px;
+  padding: 10px 15px 10px 25px;
+  font-size: 24px;
+  background-color: #fff;
+  border-radius: 200px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+.addBtn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 60px;
+  border: none;
+  height: 60px;
+  border-radius: 200px;
+  font-size: 56px;
+  line-height: 56px;
+  background-color: $blue;
+  color: #fff;
+  font-weight: 300;
+  transition: all 0.5s;
+  &:hover {
+    cursor: pointer;
+    background-color: $lgreen;
+    transition: all 0.4s;
+  }
+  &:disabled {
+    background-color: #a7bfc9;
+  }
+}
+.line {
+  width: calc(100% - 60px);
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px 0 10px 30px;
+}
+.eachSub {
+  width: calc(100% - 80px);
+  margin: 10px 30px;
+  border-radius: 200px;
+  background-color: #fff;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #2f86a694;
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+  &:hover {
+    background-color: #ddedff;
+    button:last-child {
+      background-color: #ddedff;
+      transition: none;
+    }
+    button:first-child {
+      font-size: 56px;
+      line-height: 56px;
+      transform: rotate(90deg);
+      background-color: $lgreen;
+      color: #fff;
+      border: none;
+      div:first-child {
+        display: none;
+      }
+      div:last-child {
+        display: inline;
+      }
+      transition: all 0.5s;
+    }
+  }
+  button:last-child {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 200px;
+    font-size: 48px;
+    color: #ff5b5b;
+    background-color: #fff;
+    transform: rotate(45deg);
+    border: 0px solid #ff9090;
+    transition: all 0.5s;
+    font-weight: 300;
+    &:hover {
+      color: #fff;
+      border: none;
+      background-color: #ff5b5b;
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
+  button:first-child {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 200px;
+    background-color: #fff;
+    color: $green;
+    border: solid 1px $lgreen;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+      background-color: $blue;
+      transition: all 0.5s;
+    }
+    div:last-child {
+      display: none;
+      font-weight: 300;
+    }
+  }
+  span {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    height: 50px;
+    width: auto;
+    max-width: calc(100% - 140px);
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 22px;
+    white-space: nowrap;
+  }
+}
+.error {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  &:focus-within {
+    border: 2px solid red;
+    color: red;
+  }
+}
+.streak {
+  position: absolute;
+  top: -15px;
+  right: -5px;
+  width: 21px;
+  height: 21px;
+  font-size: 14px;
+  line-height: 1px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+}
+.error1 {
+  position: fixed;
+  left: 10px;
+  top: 80px;
+  background-color: #ff3232;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: calc(100% - 20px);
+  height: auto;
+  font-size: 16px;
+  min-height: 40px;
+  line-height: 40px;
+  padding: 0px 15px;
+  border-radius: 10px;
+  z-index: 10;
+  font-weight: 400;
+}
+.nodisplay {
+  display: none;
+}
+.noCatBox {
+  .box1 {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    opacity: 0;
+    z-index: -200;
+    transition: all 0.5s;
+  }
+}
+
+.addCatBox {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  transition: all 0.5s;
+}
+.box1 {
+  width: 50%;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+  margin: 20px 25%;
+  position: absolute;
+  z-index: inherit;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  background-color: none;
+  border-radius: 20px;
+  transition: top 0.5s;
+  .closeCat {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    color: #ff5b5b;
+    &:hover {
+      background-color: #ff5b5b;
+      color: #fff;
+      cursor: pointer;
+      span {
+        transform: rotate(135deg);
+        transition: transform 0.5s;
+      }
+    }
+    span {
+      font-weight: 300;
+      display: block;
+      font-size: 56px;
+      line-height: 28px;
+      transform: rotate(45deg);
+    }
+  }
+}
+.topBox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  div {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    font-size: 24px;
+    line-height: 50px;
+    height: 50px;
+    color: $blue;
+    font-weight: 400;
+  }
+}
+.bodyBox {
+  top: 70px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  width: calc(100% - 40px);
+  border-radius: 20px;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  background-color: #fff;
+  h4 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: 500;
+    i {
+      color: #10cf1a;
+    }
+  }
+}
+.addedCats {
+  width: 100%;
+  margin: 0 0 20px 0;
+
+  div {
+    width: auto;
+    padding: 5px 15px;
+    margin: 5px 5px 5px 0;
+    border-radius: 100px;
+    display: inline-block;
+    background-color: $blue;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    &:hover {
+      cursor: pointer;
+      background-color: #0b6586;
+    }
+  }
+}
+.remBtn {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  font-weight: 300;
+  width: 16px;
+  height: 16px;
+  line-height: 5px;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.addCatBtn {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  width: 16px;
+  height: 16px;
+  line-height: 5px;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.addedTags {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .subjectBox {
+    width: 100%;
+    margin-left: 0;
+  }
+  .activeToggle {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    height: 40px;
+    button {
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  .input_box {
+    padding: 10px 15px 10px 15px;
+    font-size: 18px;
+  }
+  .line {
+    width: 100%;
+    height: 2px;
+    margin: 15px 0 10px 0;
+  }
+  .eachSub {
+    width: calc(100% - 40px);
+    margin: 10px 10px;
+    span {
+      font-size: 18px;
+      left: 75px;
+    }
+  }
+  .addSub {
+    width: calc(100% - 40px);
+    margin: 10px;
+  }
+  .box1 {
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+  }
+  .topBox {
+    div {
+      left: 15px;
+      right: 10px;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+
+const UnprotectedRoute = ({
+  isAuth: isAuth,
+  component: Component,
+  ...rest
+}) => {
+  console.log(isAuth);
+  return (
+    <Route
+      {...rest}
+      render={(props) => {
+        if (isAuth === true) {
+          return (
+            <Redirect
+              to={{ pathname: "/selfTraker", state: { from: props.location } }}
+            />
+          );
+        } else {
+          return <Component />;
+        }
+      }}
+    />
+  );
+};
+
+export default UnprotectedRoute;

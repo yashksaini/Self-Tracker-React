@@ -1,0 +1,256 @@
+$blue: #2f86a6;
+$green: #34be82;
+$lgreen: #0fd17d;
+$yellow: #f0ff24;
+$lgrey: #f8f8f8;
+
+.date {
+  margin: 20px 20px 0 20px;
+  width: 310px;
+  height: 80px;
+  position: fixed;
+  div {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: $green;
+    color: #fff;
+  }
+  div:first-child {
+    left: 0;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: $blue;
+    width: 60px;
+  }
+  div:last-child {
+    left: 70px;
+    font-weight: 400;
+    width: 220px;
+  }
+}
+.formFill {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+  }
+  p {
+    margin: 10px 0 0 0;
+    align-self: center;
+    font-size: 18px;
+    color: $blue;
+    font-weight: 500;
+    width: 530px;
+    max-width: calc(100% - 15px);
+    text-align: left;
+  }
+  h6 {
+    margin: -5px 0 0 0;
+    align-self: center;
+    font-size: 16px;
+    color: #ff0808;
+    font-weight: 400;
+    width: 530px;
+    max-width: calc(100% - 15px);
+    text-align: left;
+  }
+  .duration {
+    width: 500px;
+    max-width: calc(100% - 40px);
+    height: 30px;
+    font-size: 18px;
+    padding: 10px 10px 10px 15px;
+    border: solid 2px #9d9d9d;
+    align-self: center;
+    margin: 10px 0;
+    background-color: #fff;
+    &:focus {
+      outline: none;
+      border: solid 2px #9d9d9d;
+    }
+  }
+  select {
+    width: 530px;
+    max-width: calc(100% - 15px);
+    font-size: 18px;
+    line-height: 30px;
+    padding: 10px;
+    align-self: center;
+    margin: 10px 0;
+    background-color: #fff;
+    border: solid 2px #9d9d9d;
+    appearance: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+      border: solid 2px #9d9d9d;
+    }
+  }
+  button {
+    width: 530px;
+    height: 50px;
+    max-width: calc(100% - 15px);
+    font-size: 24px;
+    margin: 10px 0;
+    border: none;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 12px;
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+      background-color: #0079a5;
+    }
+    &:disabled {
+      background-color: rgb(138, 169, 201);
+      cursor: auto;
+    }
+  }
+  div {
+    width: 530px;
+    max-width: calc(100% - 20px);
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    align-self: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    span {
+      margin: 0 10px;
+      font-size: 18px;
+    }
+    span:last-child {
+      color: #009454;
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 40px;
+      font-weight: 500;
+    }
+    input {
+      width: 25px;
+      height: 25px;
+      margin: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.allData {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 12px 0;
+  padding: 15px 0;
+  border-top: 1px solid #d5d5d5;
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+  }
+}
+.eachData {
+  width: 530px;
+  max-width: calc(100% - 20px);
+  height: 50px;
+  border: 2px solid $blue;
+  border-radius: 200px;
+  margin: 10px 0;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  div:first-child {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $blue;
+    color: $blue;
+    border-radius: 500px;
+  }
+  div:last-child {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-weight: 300;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    font-size: 44px;
+    color: #ff6f6f;
+    &:hover {
+      color: #ff0808;
+      cursor: pointer;
+    }
+  }
+  span {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: auto;
+    max-width: calc(100% - 160px);
+    height: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .date {
+    position: relative;
+  }
+  .formFill {
+    h1 {
+      margin: 0 0 10px 0;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .eachData {
+    p {
+      font-size: 16px;
+    }
+  }
+}

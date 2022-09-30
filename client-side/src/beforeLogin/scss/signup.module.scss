@@ -1,0 +1,121 @@
+$blue: #2f86a6;
+$green: #34be82;
+$lgreen: #0fd17d;
+$yellow: #f0ff24;
+$lgrey: #f8f8f8;
+
+.signUp {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signupForm {
+  width: 40%;
+  margin: 20px 0;
+}
+.head {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.subhead {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  color: #1f1f1f;
+}
+.form_label {
+  margin: 5px 0 -10px 0;
+  font-size: 18px;
+  color: #2f86a6;
+  font-weight: 500;
+  span {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}
+.input_box {
+  width: calc(100% - 40px);
+  border: 2px white solid;
+  background-color: #f8f8f8;
+  font-size: 18px;
+  padding: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  &:focus {
+    border: 2px solid $blue;
+    background-color: #fff;
+    outline: none;
+  }
+}
+.submit_btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 22px;
+  border: none;
+  color: #fff;
+  background-color: #1daf70;
+  transition: all 0.5s;
+  &:hover {
+    cursor: pointer;
+    background-color: #047443;
+    transition: all 0.5s;
+  }
+  &:disabled {
+    background-color: #b9dacc;
+  }
+}
+.account {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  margin: 30px 0 10px 0;
+  color: $blue;
+  &:hover {
+    color: #047443;
+  }
+}
+.box1 {
+  width: 400px;
+  height: 400px;
+  transform: rotate(45deg);
+  background-color: $green;
+  position: fixed;
+  top: -250px;
+  left: -250px;
+  z-index: -1;
+}
+.box2 {
+  width: 400px;
+  height: 400px;
+  transform: rotate(45deg);
+  background-color: $green;
+  position: fixed;
+  bottom: -270px;
+  right: -270px;
+  z-index: -1;
+}
+.error {
+  color: red;
+  &:focus {
+    border: 2px solid red;
+  }
+}
+.nodisplay {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .signupForm {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+}
